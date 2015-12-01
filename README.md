@@ -10,7 +10,41 @@ This implementation is based on http://www.smartjava.org/content/html5-server-se
 
 # How to use
 
+<h1>Frontend</h1>
 
+<h2>Pre-requisites</h2>
+* npm ( https://www.npmjs.com ): brew install npm && npm install -g npm
+* Bower ( http://bower.io ): npm install -g bower
+
+<h2>Download and install packages</h2>
+from command line
+<code>
+	npm install && bower install
+</code>
+
+<h2>Execute frontend</h2>
+<code>
+	gulp serve
+</code>
+
+<h1>Backend</h1>
+
+move to server folder
+<code>
+	cd backend/nodejs/
+</code>
+
+update dependencies
+<code>
+	npm install
+</code>
+
+run!
+<code>
+	node app.js
+</code>
+
+# What can you expect to find here
 
 <h1>Frontend</h1>
 
