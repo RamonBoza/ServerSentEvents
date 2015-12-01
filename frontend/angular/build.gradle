@@ -1,0 +1,25 @@
+plugins {
+  id "com.moowork.gulp" version "0.11"
+}
+
+node {
+    // Version of node to use.
+    version = '4.2.1'
+
+    // Enabled the automatic download. False is the default (for now).
+    download = true
+}
+
+task bowerInstall(type: NodeTask) {
+    script = file('node_modules/bower/bin/bower')
+    args = ['install']
+    dependsOn ('npmInstall', 'installGulp')
+}
+
+// processes your package.json before running gulp build
+gulp_build.dependsOn bowerInstall
+gulp_test.dependsOn bowerInstall
+gulp_protractor.dependsOn bowerInstall
+gulp_distZip.dependsOn bowerInstall
+
+gulp.colors = true
